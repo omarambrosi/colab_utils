@@ -52,4 +52,4 @@ def gspread_to_dfs(spreadsheet_id):
 
 def bq_to_df(project_id, query):
   auth.authenticate_user()
-  return bigquery.Client(project_id).query(sql).to_dataframe()
+  return bigquery.Client(project_id).query(query).to_dataframe()
