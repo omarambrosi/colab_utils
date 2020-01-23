@@ -1,8 +1,11 @@
-# colab utils
-#
-# To import into a Colab project:
-# !git clone https://github.com/omarambrosi/colab_utils
-# %load colab_utils.py
+"""To import into a Colab project:
+
+!git clone https://github.com/omarambrosi/colab_utils
+%load colab_utils/colab_utils.py
+import sys
+sys.path.append('colab_utils')
+from colab_utils import *
+"""
 
 from google.colab import files, auth
 from google.cloud import bigquery
