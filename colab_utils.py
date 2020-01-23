@@ -21,15 +21,15 @@ def excel_to_df():
   local_file = files.upload()
   return pd.read_excel(list(local_file.keys())[0])
 
-def csv_to_bq(project_id, dataset, table):
-  df_to_bq(csv_to_df(), project_id, dataset, table)
-
 def df_to_bq(df, project_id, dataset, table):
   auth.authenticate_user()
   client = bigquery.Client(project=project_id)
   dataset_ref = client.dataset(dataset)
   table_ref = dataset_ref.table(table)
   client.load_table_from_dataframe(df, table_ref).result()
+  
+def csv_to_bq(project_id, dataset, table):
+  df_to_bq(csv_to_df(), project_id, dataset, table)
 
 def df_to_csv(df, file_name):
   full_file_name = file_name + " " + str(date.today()) + '.csv'
