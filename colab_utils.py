@@ -49,3 +49,7 @@ def gspread_to_dfs(spreadsheet_id):
 
   #Convert the dict of tables into a dict of dataframes
   return {key : pd.DataFrame(tables[key][1:], columns=tables[key][0]) for key in tables}
+
+def bq_to_df(project_id, query):
+  auth.authenticate_user()
+  return bigquery.Client(project_id).query(sql).to_dataframe()
