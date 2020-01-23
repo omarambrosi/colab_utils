@@ -39,7 +39,8 @@ def df_to_csv(df, file_name):
 def gspread_to_dfs(spreadsheet_id):
   import gspread
   from oauth2client.client import GoogleCredentials
-
+  
+  auth.authenticate_user()
   gc = gspread.authorize(GoogleCredentials.get_application_default())
   book = gc.open_by_key(spreadsheet_id)
 
