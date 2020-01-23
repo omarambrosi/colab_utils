@@ -35,3 +35,16 @@ def df_to_csv(df, file_name):
   full_file_name = file_name + " " + str(date.today()) + '.csv'
   df.to_csv(full_file_name)
   files.download(full_file_name)
+  
+def gspread_to_dfs(spreadsheet_id):
+  import gspread
+  from oauth2client.client import GoogleCredentials
+
+  gc = gspread.authorize(GoogleCredentials.get_application_default())
+  book = gc.open_by_key(spreadsheet_id)
+
+  #Import the data from the spreadsheet into a dict of tables
+  tables = {sheet.title : sheet.get_all_values() for sheet in book.worksheets()}
+
+  #Convert the dict of tables into a dict of dataframes
+  return {key : pd.DataFrame(tables[key][1:], columns=tables[key][0]) for key in tables}
