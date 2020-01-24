@@ -25,13 +25,8 @@ def df_to_bq(df, project_id, dataset, table):
   auth.authenticate_user()
   client = bigquery.Client(project=project_id)
   dataset_ref = client.dataset(dataset)
-  table_ref = dataset_ref.table(table)
-  
-  job_config = bigquery.LoadJobConfig(
-    timePartitioning()
-  )
-  
-  client.load_table_from_dataframe(df, table_ref, job_config=job_config).result()
+  table_ref = dataset_ref.table(table)  
+  client.load_table_from_dataframe(df, table_ref, partitioned=True).result()
   
 def csv_to_bq(project_id, dataset, table):
   df_to_bq(csv_to_df(), project_id, dataset, table)
