@@ -28,8 +28,9 @@ def df_to_bq(df, project_id, dataset, table):
   table_ref = dataset_ref.table(table)
   
   job_config = bigquery.LoadJobConfig(
-    time_partitioning_type=DAY
+    TimePartitioning : {type_: "DAY"}
   )
+  
   client.load_table_from_dataframe(df, table_ref, job_config=job_config).result()
   
 def csv_to_bq(project_id, dataset, table):
