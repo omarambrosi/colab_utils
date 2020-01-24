@@ -28,8 +28,6 @@ def df_to_bq(df, project_id, dataset, table):
   table_ref = dataset_ref.table(table)  
   
   job_config = bigquery.LoadJobConfig()
-  job_config.source_format = 'CSV'
-  job_config.skip_leading_rows = 1
   job_config._properties['load']['timePartitioning'] = {'type': 'DAY'}
   job_config.autodetect=True
 
