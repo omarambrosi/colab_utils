@@ -1,7 +1,7 @@
 """To import into a Colab project:
 
 !git clone https://github.com/omarambrosi/colab_utils
-%load colab_utils/colab_utils.py
+%load colab_utils/ColabUtils.py
 import sys
 sys.path.append('colab_utils')
 from colab_utils import *
