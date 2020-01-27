@@ -4,7 +4,7 @@
 %load colab_utils/ColabUtils.py
 import sys
 sys.path.append('colab_utils')
-from colab_utils import *
+from ColabUtils import *
 """
 
 from google.colab import files, auth
