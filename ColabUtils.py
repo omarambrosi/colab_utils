@@ -21,11 +21,13 @@ def excel_to_df():
   local_file = files.upload()
   return pd.read_excel(list(local_file.keys())[0])
 
-def df_to_bq(df, project_id, dataset, table, partitioned=False):
+def df_to_bq(df, table_location, partitioned=False):
+  project_id, dataset_id, table_id = table_location.split(".")
+  
   auth.authenticate_user()
   client = bigquery.Client(project=project_id)
-  dataset_ref = client.dataset(dataset)
-  table_ref = dataset_ref.table(table)  
+  dataset_ref = client.dataset(dataset_id)
+  table_ref = dataset_ref.table(table_id)  
   
   job_config = bigquery.LoadJobConfig()
   job_config.autodetect=True
@@ -34,11 +36,13 @@ def df_to_bq(df, project_id, dataset, table, partitioned=False):
 
   client.load_table_from_dataframe(df, table_ref, job_config=job_config).result()
   
-def csv_to_bq(project_id, dataset, table, partitioned=False):
+def csv_to_bq(table_location, partitioned=False):
+  project_id, dataset_id, table_id = table_location.split(".")
+  
   auth.authenticate_user()
   client = bigquery.Client(project=project_id)
-  dataset_ref = client.dataset(dataset)
-  table_ref = dataset_ref.table(table)  
+  dataset_ref = client.dataset(dataset_id)
+  table_ref = dataset_ref.table(table_id)  
 
   job_config = bigquery.LoadJobConfig()
   job_config.source_format = 'CSV'
