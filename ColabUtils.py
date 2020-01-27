@@ -12,6 +12,10 @@ from google.cloud import bigquery
 from datetime import date
 import pandas as pd
 import io
+from oauth2client.client import GoogleCredentials
+import gspread
+import gspread_dataframe as gd
+
 
 def csv_to_df():
   local_file = files.upload()
@@ -72,6 +76,14 @@ def gspread_to_dfs(spreadsheet_id):
 
   #Convert the dict of tables into a dict of dataframes
   return {key : pd.DataFrame(tables[key][1:], columns=tables[key][0]) for key in tables}
+
+def df_to_gspread(df, gspread_name):
+  auth.authenticate_user()
+  gc = gspread.authorize(GoogleCredentials.get_application_default())
+  sh = gc.create(gspread_name)
+  ws = sh.get_worksheet(0)
+  gd.set_with_dataframe(ws, df)
+  return "https://docs.google.com/spreadsheets/d/" + sh.id
 
 def bq_to_df(project_id, query):
   auth.authenticate_user()
