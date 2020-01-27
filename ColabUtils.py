@@ -82,5 +82,5 @@ def get_random_rows_from_bq_table(table_location, n_of_samples):
       FROM `{table_location}`
       WHERE RAND() < {n_of_samples}/(SELECT COUNT(*) FROM `{table_location}`)
   """
-  project = ".".split(table_location)[0]
+  project = table_location.split(".")[0]
   return bq_to_df(project, query)
