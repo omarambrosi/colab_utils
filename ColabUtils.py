@@ -87,10 +87,11 @@ def df_to_gspread(df, gspread_name):
 
 def bq_to_df(project_id, query):
   auth.authenticate_user()
-  return bigquery.Client(project_id).query(query).to_dataframe()
+  job_config = bigquery.QueryJobConfig()
+  return bigquery.Client(project_id).query(query, job_config=job_config).to_dataframe()
 
 # pull an APPROX. number of random samples
-def get_random_rows_from_bq_table(table_location, n_of_samples):
+def get_random_rows_from_bq_table(project_id, table_location, n_of_samples):
   query = f"""
       WITH a as (SELECT COUNT(*) FROM `{table_location}`)
 
@@ -98,5 +99,4 @@ def get_random_rows_from_bq_table(table_location, n_of_samples):
       FROM `{table_location}`
       WHERE RAND() < {n_of_samples}/(SELECT COUNT(*) FROM `{table_location}`)
   """
-  project = table_location.split(".")[0]
-  return bq_to_df(project, query)
+  return bq_to_df(project_id, query)
