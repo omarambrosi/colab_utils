@@ -100,3 +100,14 @@ def get_random_rows_from_bq_table(project_id, table_location, n_of_samples):
       WHERE RAND() < {n_of_samples}/(SELECT COUNT(*) FROM `{table_location}`)
   """
   return bq_to_df(project_id, query)
+
+from google.cloud import bigquery
+
+def list_bq_datasets(project_id):
+  auth.authenticate_user()
+  client = bigquery.Client(project=project_id)
+  datasets = list(client.list_datasets()) 
+  project = client.project
+
+  for dataset in datasets:
+    print(dataset.dataset_id)
