@@ -103,7 +103,7 @@ def get_random_rows_from_bq_table(project_id, table_location, n_of_samples):
 
 from google.cloud import bigquery
 
-def list_bq_datasets(project_id):
+def list_datasets_from_bq_project(project_id):
   auth.authenticate_user()
   client = bigquery.Client(project=project_id)
   datasets = list(client.list_datasets()) 
