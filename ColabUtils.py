@@ -109,5 +109,4 @@ def list_datasets_from_bq_project(project_id):
   datasets = list(client.list_datasets()) 
   project = client.project
 
-  for dataset in datasets:
-    print(dataset.dataset_id)
+  return [dataset.dataset_id for dataset in datasets]
