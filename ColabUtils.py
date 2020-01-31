@@ -58,6 +58,9 @@ def csv_to_bq(table_location, partitioned=False):
   with open(list(local_file.keys())[0], "rb") as source_file:
     client.load_table_from_file(source_file, table_ref, job_config=job_config).result()
 
+""" drops the index (the original df.to_csv() method doesn't drop the index by default)
+"""
+
 def df_to_csv(df, file_name):
   full_file_name = file_name + " " + str(date.today()) + '.csv'
   df.to_csv(full_file_name, index=False)
