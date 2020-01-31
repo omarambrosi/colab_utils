@@ -60,7 +60,7 @@ def csv_to_bq(table_location, partitioned=False):
 
 def df_to_csv(df, file_name):
   full_file_name = file_name + " " + str(date.today()) + '.csv'
-  df.to_csv(full_file_name)
+  df.to_csv(full_file_name, index=False)
   files.download(full_file_name)
   
 def gspread_to_dfs(spreadsheet_id):
