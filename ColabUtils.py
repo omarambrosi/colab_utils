@@ -61,9 +61,9 @@ def csv_to_bq(table_location, partitioned=False):
 """ drops the index (the original df.to_csv() method doesn't drop the index by default)
 """
 
-def df_to_csv(df, file_name):
+def df_to_csv(df, file_name, index=False):
   full_file_name = file_name + " " + str(date.today()) + '.csv'
-  df.to_csv(full_file_name, index=False)
+  df.to_csv(full_file_name, index=index)
   files.download(full_file_name)
   
 def gspread_to_dfs(spreadsheet_id):
