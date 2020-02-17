@@ -1,5 +1,5 @@
 # Colab Utils
-This directory contains functions that simplify and extend the intereaction between Colab and files, Pandas dataframes and BigQuery.
+This directory contains functions that extend and simplify the intereaction between Colab and files, Pandas dataframes and BigQuery.
 
 ## Functions
 ### BigQuery
