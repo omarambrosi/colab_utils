@@ -19,8 +19,8 @@ This directory contains functions that extend and simplify the intereaction betw
 ### YouTube
 
 ## Documentation
-#### df_to_bq(df, table_location, partitioned=False)
-#### csv_to_bq(table_location, partitioned=False)
-#### bq_to_df(project_id, query)
-#### get_random_rows_from_bq_table(project_id, table_location, n_of_samples)
-#### list_datasets_from_bq_project(project_id)
+### df_to_bq(df, table_location, partitioned=False)
+### csv_to_bq(table_location, partitioned=False)
+### bq_to_df(project_id, query)
+### get_random_rows_from_bq_table(project_id, table_location, n_of_samples)
+### list_datasets_from_bq_project(project_id)
