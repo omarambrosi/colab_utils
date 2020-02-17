@@ -36,5 +36,5 @@ from ColabUtils import *
 ```colab
 list_datasets_from_bq_project('bigquery-public-data')[:3]
 ```
-result:
+results:
 ['austin_311', 'austin_bikeshare', 'austin_crime']
