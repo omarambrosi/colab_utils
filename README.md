@@ -1,5 +1,5 @@
 # Colab Utils
-This directory contains functions that simplify and extend Colab intereaction with files and Pandas dataframes. 
+This directory contains functions that simplify and extend the intereaction between Colab and files, Pandas dataframes and BigQuery.
 
 ## Functions
 * [csv_to_df](#csv_to_df)
