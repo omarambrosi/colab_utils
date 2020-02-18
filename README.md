@@ -27,8 +27,8 @@ from ColabUtils import *
 * [df_to_gspread](#df_to_gspread)
 
 ### YouTube
-yt_to_df(item_id) pull metadta from video or channel or playlist
-claims_to_df(item_id) pull a report of claims from the item (video, channel, playlist)
+yt_to_df(client_secret_file, item_id) pull metadta from video or channel or playlist
+claims_to_df(client_secret_file, item_id) pull a report of claims from the item (video, channel, playlist)
 
 ## Documentation
 ### df_to_bq(df, table_location, partitioned=False)
