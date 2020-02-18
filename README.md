@@ -16,8 +16,6 @@ from ColabUtils import *
 * [csv_to_bq](#csv_to_bq)
 * [gspread_to_bq] all sheets
 * [bq_to_df](#bq_to_df)
-bq_to_csv
-bq_to_gspread
 * [get_random_rows_from_bq_table](#get_random_rows_from_bq_table)
 * [list_datasets_from_bq_project](#list_datasets_from_bq_project)
 
@@ -26,7 +24,6 @@ bq_to_gspread
 * [excel_to_df](#excel_to_df)
 * [gspread_to_dfs](#gspread_to_dfs)
 * [df_to_csv](#df_to_csv)
-df_to_excel
 * [df_to_gspread](#df_to_gspread)
 
 ### YouTube
