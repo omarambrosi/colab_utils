@@ -1,5 +1,5 @@
 # Colab Utils
-This directory contains functions that extend and simplify the intereaction between Colab and files, Pandas dataframes and BigQuery.
+This directory contains functions that extend and simplify the intereaction between Colab and Pandas, BigQuery and YouTube.
 
 To import all the functions into a Colab notebook:
 ```colab
@@ -11,13 +11,6 @@ from ColabUtils import *
 ```
 
 ## Functions
-### BigQuery
-* [df_to_bq](#df_to_bq)
-* [csv_to_bq](#csv_to_bq)
-* [gspread_to_bq] all sheets
-* [bq_to_df](#bq_to_df)
-* [get_random_rows_from_bq_table](#get_random_rows_from_bq_table)
-* [list_datasets_from_bq_project](#list_datasets_from_bq_project)
 
 ### Pandas
 * [csv_to_df](#csv_to_df)
@@ -25,6 +18,14 @@ from ColabUtils import *
 * [gspread_to_dfs](#gspread_to_dfs)
 * [df_to_csv](#df_to_csv)
 * [df_to_gspread](#df_to_gspread)
+
+### BigQuery
+* [df_to_bq](#df_to_bq)
+* [csv_to_bq](#csv_to_bq)
+* [gspread_to_bq] all sheets
+* [bq_to_df](#bq_to_df)
+* [get_random_rows_from_bq_table](#get_random_rows_from_bq_table)
+* [list_datasets_from_bq_project](#list_datasets_from_bq_project)
 
 ### YouTube
 yt_to_df(client_secret_file, item_id) pull metadta from video or channel or playlist
