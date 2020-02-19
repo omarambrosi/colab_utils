@@ -31,6 +31,9 @@ from ColabUtils import *
 yt_to_df(client_secret_file, item_id) pull metadta from video or channel or playlist
 claims_to_df(client_secret_file, item_id) pull a report of claims from the item (video, channel, playlist)
 
+### Twitter
+twitter_to_df(hashtag)
+
 ## Documentation
 ### df_to_bq(df, table_location, partitioned=False)
 ### csv_to_bq(table_location, partitioned=False)
