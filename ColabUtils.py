@@ -15,7 +15,7 @@ import io
 from oauth2client.client import GoogleCredentials
 import gspread
 import gspread_dataframe as gd
-
+from apiclient.discovery import build
 
 def csv_to_df():
   local_file = files.upload()
@@ -129,8 +129,6 @@ def _generate_df():
 														'likeCount', 'dislikeCount', 'commentCount'])
 
 def yt_to_df(developerKey, id):
-	from apiclient.discovery import build 
-	import pandas as pd
 	youtube = _yt_auth(developerKey)
 
 	if type(id) is list:
