@@ -124,7 +124,7 @@ def _yt_auth(developerKey):
 	return youtube
 	
 def _generate_df():
-	return DataFrame(columns=['video_id', 'publishedAt', 'video_title', 'description',
+	return pd.DataFrame(columns=['video_id', 'publishedAt', 'video_title', 'description',
 	                          'channelTitle', 'tags', 'madeForKids', 'viewCount',
 														'likeCount', 'dislikeCount', 'commentCount'])
 
