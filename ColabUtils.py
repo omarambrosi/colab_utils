@@ -129,7 +129,7 @@ def _generate_df():
 
 def yt_to_df(developerKey, id):
 	youtube = _yt_auth(developerKey)
-	result = df.DataFrame()
+	result = pd.DataFrame()
 	if type(id) is list:
 		start = stop = 0
 		c = 0
