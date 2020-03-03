@@ -139,9 +139,13 @@ def yt_to_df(developerKey, id):
  			x = 1
 		rounds = (len(id) // 50) + x
 		while rounds > 0: 
-			results = results.append(_get_videos(youtube, id[c * 50: c * 50 + 50]))
-			rounds -=1
-			c += 1
+			try:
+				results = results.append(_get_videos(youtube, id[c * 50: c * 50 + 50]))
+				rounds -=1
+				c += 1
+			except:
+				print('API quota error. The results are partial')
+				return results
 				
 		for i in id:
 			if len(i) != 11:
