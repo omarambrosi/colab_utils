@@ -139,7 +139,7 @@ def yt_to_df(developerKey, id):
  			x = 1
 		rounds = (len(id) // 50) + x
 		while rounds > 0: 
-			results.append(_get_videos(youtube, id[c * 50: c * 50 + 50], rounds))
+			results.append(_get_videos(youtube, id[c * 50: c * 50 + 50]))
 			rounds -=1
 			c += 1
 				
