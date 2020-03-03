@@ -124,9 +124,8 @@ def _yt_auth(developerKey):
 	return youtube
 	
 def _generate_df():
-	return pd.DataFrame(columns=['video_id', 'publishedAt', 'video_title', 'description',
-	                          'channelTitle', 'tags', 'madeForKids', 'viewCount',
-														'likeCount', 'dislikeCount', 'commentCount'])
+	return pd.DataFrame(columns=['video_id', 'publishedAt', 'video_title', 'description', 'duration', 'privacyStatus',
+	                          'channelTitle', 'tags', 'madeForKids', 'viewCount', 'likeCount', 'dislikeCount', 'commentCount'])
 
 def yt_to_df(developerKey, id):
 	youtube = _yt_auth(developerKey)
@@ -165,7 +164,7 @@ def _get_videos(youtube, video_ids):
 	df = _generate_df()
 	video_response = youtube.videos().list(
 		id=",".join(video_ids),
-		part='snippet,status,statistics'
+		part='snippet,status,statistics,contentDetails'
 	).execute()
 	videos = video_response['items']
 
@@ -176,6 +175,8 @@ def _get_videos(youtube, video_ids):
 										'description' : video['snippet'].get('description'),
 										'channelTitle' : video['snippet'].get('channelTitle'),
 										'tags' : video['snippet'].get('tags'),
+										'duration' : video['contentDetails'].get('duration'),
+										'privacyStatus' : video['status'].get('privacyStatus'),
 										'madeForKids' : video['status'].get('madeForKids'),
 										'viewCount' : video['statistics'].get('viewCount'),
 										'likeCount' : video['statistics'].get('likeCount'),
