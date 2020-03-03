@@ -129,14 +129,26 @@ def _generate_df():
 
 def yt_to_df(developerKey, id):
 	youtube = _yt_auth(developerKey)
-
+	result = df.DataFrame()
 	if type(id) is list:
-		if len(id) > 50:
-			raise ValueError('Max number of video ids is 50')
+		start = stop = 0
+		c = 0
+		if (len(l) % 50) == 0:
+  			x = 0
+		else:
+ 			x = 1
+  
+		rounds = (len(l) // 50) + x
+		while rounds > 0: 
+			results.append(_get_videos(youtube, l[c * 50: c * 50 + 50], rounds))
+			rounds -=1
+			c += 1
+				
 		for i in id:
 			if len(i) != 11:
 				raise ValueError(f'{i} is not a valid video id')
-		return _get_videos(youtube, id)
+		return results
+	
 	elif type(id) is str:
 		resource = {24:"channel", 34:"playlist"}
 		try:
