@@ -129,7 +129,7 @@ def _generate_df():
 
 def yt_to_df(developerKey, id):
 	youtube = _yt_auth(developerKey)
-	result = pd.DataFrame()
+	results = pd.DataFrame()
 	if type(id) is list:
 		start = stop = 0
 		c = 0
@@ -137,7 +137,6 @@ def yt_to_df(developerKey, id):
   			x = 0
 		else:
  			x = 1
-  
 		rounds = (len(id) // 50) + x
 		while rounds > 0: 
 			results.append(_get_videos(youtube, id[c * 50: c * 50 + 50], rounds))
