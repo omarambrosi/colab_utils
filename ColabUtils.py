@@ -133,10 +133,7 @@ def yt_to_df(developerKey, id):
 	if type(id) is list:
 		start = stop = 0
 		c = 0
-		if (len(id) % 50) == 0:
-  			x = 0
-		else:
- 			x = 1
+		x = 0 if (len(id) % 50) == 0 else 1
 		rounds = (len(id) // 50) + x
 		while rounds > 0: 
 			try:
