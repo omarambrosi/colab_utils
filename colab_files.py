@@ -43,7 +43,7 @@ def gspread_to_dfs(spreadsheet_id):
   #Convert the dict of tables into a dict of dataframes
   return {key : pd.DataFrame(tables[key][1:], columns=tables[key][0]) for key in tables}
 
-def df_to_gspread(df, gspread_name):
+def df_to_gspread(df, gspread_name="Untitled"):
   auth.authenticate_user()
   gc = gspread.authorize(GoogleCredentials.get_application_default())
   sh = gc.create(gspread_name)
