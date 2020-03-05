@@ -19,7 +19,7 @@ import colab_youtube
 * [df_to_gspread](#df_to_gspread)
 
 ### BigQuery
-* [df_to_bq](#df_to_bqdf-table_location-partitioned=False)
+* [df_to_bq](#df_to_bqdf-table_location-partitioned=false)
 * [csv_to_bq](#csv_to_bq)
 * [gspread_to_bq]
 * [bq_to_df](#bq_to_df)
