@@ -57,7 +57,6 @@ yt_to_df(YOUR_DEVELOPER_KEY, 'UC-lHJZR3Gqxm24_Vd_AJ5Yw').head(3)
 pull metadta from video or channel or playlist
 
 results:
-| ['video_id', 'publishedAt' , 'video_title' , 'description' , 'channelTitle' , 'tags' , 'madeForKids' , 'viewCount' , 'likeCount' , 'dislikeCount' , 'commentCount] |
-|-|
-
-VgvvfSvg2bQ | 2020-02-23T17:30:01.000Z | What is Jake Paul up to? | The financial freedom movement is here thanks ...	PewDiePie | [SATIRE, What is Jake Paul up to?, jake paul, ... | False | 6279395 | 554819 | 8267 46464
+|   video_id   |       publishedAt       |       video_title        |                    description                     | channelTitle | tags | madeForKids | viewCount | likeCount | dislikeCount | commentCount |
+|--------------|-------------------------|--------------------------|----------------------------------------------------|-------------------|-------------------------|--------------------------|-------------------|--------------------------------|-------------------|-------------------------|
+| VgvvfSvg2bQ | 2020-02-23T17:30:01.000Z | What is Jake Paul up to? | The financial freedom movement is here thanks ...	 | PewDiePie | [SATIRE, What is Jake Paul up to?, jake paul, ...] | False | 6279395 | 554819 | 8267 46464 |
