@@ -32,13 +32,12 @@ import colab_youtube
 
 ## Documentation
 ## Pandas
-## YouTube
 ## BigQuery
-### df_to_bq(df, table_location, partitioned=False)
-### csv_to_bq(table_location, partitioned=False)
-### bq_to_df(project_id, query)
-### get_random_rows_from_bq_table(project_id, table_location, n_of_samples)
-### list_datasets_from_bq_project(project_id)
+### [df_to_bq(df, table_location, partitioned=False)](colab_bigquery.py)
+### [csv_to_bq(table_location, partitioned=False)](colab_bigquery.py)
+### [bq_to_df(project_id, query)](colab_bigquery.py)
+### [get_random_rows_from_bq_table(project_id, table_location, n_of_samples)](colab_bigquery.py)
+### [list_datasets_from_bq_project(project_id)](colab_bigquery.py)
 ```colab
 list_datasets_from_bq_project('bigquery-public-data')[:3]
 ```
@@ -46,7 +45,7 @@ results:
 ```Python
 ['austin_311', 'austin_bikeshare', 'austin_crime']
 ```
-
+## YouTube
 ### [yt_to_df(developerKey, id)](colab_youtube.py)
 Import data from a list of videos, a channel or a playlist.
 ```colab
