@@ -2,12 +2,11 @@
 This directory contains functions that extend and simplify the intereaction between Colab and Pandas, BigQuery and YouTube.
 
 To import all the functions into a Colab notebook:
-```colab
+```
 !git clone https://github.com/omarambrosi/colab_utils
-%load colab_utils/ColabUtils.py
 import sys
 sys.path.append('colab_utils')
-from ColabUtils import *
+import colab_utils
 ```
 
 ## Functions
