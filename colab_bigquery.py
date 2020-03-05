@@ -53,14 +53,13 @@ def bq_to_df(project_id, query):
   job_config = bigquery.QueryJobConfig()
   return bigquery.Client(project_id).query(query, job_config=job_config).to_dataframe()
 
-# pull an APPROX. number of random samples
-def get_random_rows_from_bq_table(project_id, table_location, n_of_samples):
+def get_random_rows_from_bq_table(project_id, table_location, n_of_rows):
   query = f"""
       WITH a as (SELECT COUNT(*) FROM `{table_location}`)
 
       SELECT *
       FROM `{table_location}`
-      WHERE RAND() < {n_of_samples}/(SELECT COUNT(*) FROM `{table_location}`)
+      WHERE RAND() < {n_of_rows}/(SELECT COUNT(*) FROM `{table_location}`)
   """
   return bq_to_df(project_id, query)
 
