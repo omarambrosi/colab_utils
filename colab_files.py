@@ -24,7 +24,7 @@ def excel_to_df():
 
 """ drops the index (the original df.to_csv() method doesn't drop the index by default)
 """
-def df_to_csv(df, file_name, index=False):
+def df_to_csv(df, file_name="Untitled", index=False):
   full_file_name = file_name + " " + str(date.today()) + '.csv'
   df.to_csv(full_file_name, index=index)
   files.download(full_file_name)
