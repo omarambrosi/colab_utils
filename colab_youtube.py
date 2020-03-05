@@ -1,4 +1,5 @@
-''' to use this module in colab:
+'''To import into a Colab notebook:
+
 !git clone https://github.com/omarambrosi/colab_utils
 import sys
 sys.path.append('colab_utils')
