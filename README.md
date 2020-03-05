@@ -2,7 +2,7 @@
 This package contains modules that extend and simplify the intereaction with Pandas, BigQuery and YouTube.
 
 To import all the functions of a module into a Colab notebook:
-```python
+```ipython
 !git clone https://github.com/omarambrosi/colab_utils
 import sys
 sys.path.append('colab_utils')
@@ -49,8 +49,6 @@ results:
 |	Q51195092	| 51195092	 | Template:Taxonomy/Bythaelurus | Templa...|	None	          | None     |
 |	Q75088335	| 75088335	 | CTLGD 8239	                   | None	    | None	          | None     |
 |	Q56129812	| 56129812	 | transcriptional regulator...  | None	    | microbial ge... | None     |
-
-
 
 ### [list_datasets_from_bq_project(project_id)](colab_bigquery.py)
 ```python
