@@ -39,7 +39,8 @@ import colab_youtube
 ### [get_random_rows_from_bq_table(project_id, table_location, n_of_rows)](colab_bigquery.py)
 Get an APPROXIMATE number of random rows from a BigQuery table
 ```python
-get_random_rows_from_bq_table(YOUR_BQ_PROJECT_ID, 'bigquery-public-data.wikipedia.wikidata', 3).iloc[:,0:6]
+df = get_random_rows_from_bq_table(YOUR_BQ_PROJECT_ID, 'bigquery-public-data.wikipedia.wikidata', 3)
+df.iloc[:,0:6]
 ```
 results:
 | id	      | numeric_id | en_label                      | en_wiki	| en_description	| ja_label |
