@@ -44,8 +44,12 @@ import colab_youtube
 list_datasets_from_bq_project('bigquery-public-data')[:3]
 ```
 results:
-| ['austin_311', 'austin_bikeshare', 'austin_crime'] |
-|-|
+
+```Python
+['austin_311', 'austin_bikeshare', 'austin_crime']
+```
+
+
 ### yt_to_df(developerKey, id)
 ```colab
 yt_to_df(YOUR_DEVELOPER_KEY, 'UC-lHJZR3Gqxm24_Vd_AJ5Yw').head(3)
