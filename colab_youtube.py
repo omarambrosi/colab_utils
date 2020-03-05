@@ -1,3 +1,10 @@
+''' to use this module in colab:
+!git clone https://github.com/omarambrosi/colab_utils
+import sys
+sys.path.append('colab_utils')
+from colab_youtube import *
+'''
+
 import pandas as pd
 from apiclient.discovery import build
 
@@ -70,19 +77,19 @@ def _get_videos(youtube, video_ids):
 
 	for video in videos:
 		df = df.append({'video_id': video['id'],
-										'publishedAt' : video['snippet'].get('publishedAt'),
-										'video_title' : video['snippet'].get('title'),
-										'description' : video['snippet'].get('description'),
-										'channelTitle' : video['snippet'].get('channelTitle'),
-										'tags' : video['snippet'].get('tags'),
-										'duration' : video['contentDetails'].get('duration'),
-										'privacyStatus' : video['status'].get('privacyStatus'),
-										'madeForKids' : video['status'].get('madeForKids'),
-										'viewCount' : video['statistics'].get('viewCount'),
-										'likeCount' : video['statistics'].get('likeCount'),
-										'dislikeCount' : video['statistics'].get('dislikeCount'),
-										'commentCount' : video['statistics'].get('commentCount')
-										}, ignore_index=True)
+				'publishedAt' : video['snippet'].get('publishedAt'),
+				'video_title' : video['snippet'].get('title'),
+				'description' : video['snippet'].get('description'),
+				'channelTitle' : video['snippet'].get('channelTitle'),
+				'tags' : video['snippet'].get('tags'),
+				'duration' : video['contentDetails'].get('duration'),
+				'privacyStatus' : video['status'].get('privacyStatus'),
+				'madeForKids' : video['status'].get('madeForKids'),
+				'viewCount' : video['statistics'].get('viewCount'),
+				'likeCount' : video['statistics'].get('likeCount'),
+				'dislikeCount' : video['statistics'].get('dislikeCount'),
+				'commentCount' : video['statistics'].get('commentCount')
+				}, ignore_index=True)
 	 	
 	df.set_index('video_id', inplace=True)
 	df.sort_values(by='publishedAt', ascending=False, inplace=True)
