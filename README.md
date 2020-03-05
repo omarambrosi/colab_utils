@@ -59,8 +59,7 @@ results:
 VgvvfSvg2bQ | 2020-02-23T17:30:01.000Z | What is Jake Paul up to? | The financial freedom movement is here thanks ...	PewDiePie | [SATIRE, What is Jake Paul up to?, jake paul, ... | False | 6279395 | 554819 | 8267 46464
 
 
-										
-										
+																	
 								
 zudXXIMUeV4	2020-02-22T17:05:43.000Z	Why I HATE Ice Age Baby..	ice age, bernie sanders and epic more memes\n1...	PewDiePie	[SATIRE]	False	8294802	876844	9012	65473
 Old1YzSG_S8	2020-02-21T17:24:01.000Z	I went on a break for 30 days & THIS HAPPENED	Good to be back gamer\n100 CLUB MERCH OUT NOW!...	PewDiePie	[SATIRE]	False	12563728	1643597	20071	178070
