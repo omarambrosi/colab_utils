@@ -21,17 +21,18 @@ import colab_youtube
 ### BigQuery
 * [df_to_bq](#df_to_bq)
 * [csv_to_bq](#csv_to_bq)
-* [gspread_to_bq] all sheets
+* [gspread_to_bq]
 * [bq_to_df](#bq_to_df)
 * [get_random_rows_from_bq_table](#get_random_rows_from_bq_table)
 * [list_datasets_from_bq_project](#list_datasets_from_bq_project)
 
 ### YouTube
-* [yt_to_df](#yt_to_df) pull metadta from video or channel or playlist
-* [claims_to_df(client_secret_file, item_id)] pull a report of claims from the item (video, channel, playlist)
+* [yt_to_df](#yt_to_df)
+* [cid_to_df]
 
 ### Twitter
-twitter_to_df(hashtag)
+* [twitter_to_df]
+
 
 ## Documentation
 ### df_to_bq(df, table_location, partitioned=False)
@@ -49,6 +50,8 @@ results:
 ```colab
 yt_to_df(YOUR_DEVELOPER_KEY, 'UC-lHJZR3Gqxm24_Vd_AJ5Yw').head(3)
 ```
+pull metadta from video or channel or playlist
+
 results:
 | ['video_id', 'publishedAt' , 'video_title' , 'description' , 'channelTitle' , 'tags' , 'madeForKids' , 'viewCount' , 'likeCount' , 'dislikeCount' , 'commentCount] |
 |-|
