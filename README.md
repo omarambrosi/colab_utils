@@ -47,7 +47,7 @@ results:
 ['austin_311', 'austin_bikeshare', 'austin_crime']
 ```
 
-### yt_to_df(developerKey, id)(colab_youtube.py)
+### yt_to_df(developerKey, id)(/colab_utils/colab_youtube.py)
 Import data from a list of videos, a channel or a playlist.
 ```colab
 yt_to_df(YOUR_DEVELOPER_KEY, 'UC-lHJZR3Gqxm24_Vd_AJ5Yw').head(3)
