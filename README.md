@@ -19,7 +19,7 @@ import colab_youtube
 * [df_to_gspread](#df_to_gspread)
 
 ### BigQuery
-* [df_to_bq](#df_to_bq)
+* [df_to_bq](#df_to_bqdf,-table_location,-partitioned=False)
 * [csv_to_bq](#csv_to_bq)
 * [gspread_to_bq]
 * [bq_to_df](#bq_to_df)
@@ -35,11 +35,11 @@ import colab_youtube
 
 
 ## Documentation
-#### df_to_bq(df, table_location, partitioned=False)
-#### #csv_to_bq(table_location, partitioned=False)
+### df_to_bq(df, table_location, partitioned=False)
+### csv_to_bq(table_location, partitioned=False)
 #bq_to_df (project_id, query)
-#### get_random_rows_from_bq_table(project_id, table_location, n_of_samples)
-#### list_datasets_from_bq_project(project_id)
+### get_random_rows_from_bq_table(project_id, table_location, n_of_samples)
+### list_datasets_from_bq_project(project_id)
 ```colab
 list_datasets_from_bq_project('bigquery-public-data')[:3]
 ```
@@ -63,3 +63,12 @@ VgvvfSvg2bQ | 2020-02-23T17:30:01.000Z | What is Jake Paul up to? | The financia
 								
 zudXXIMUeV4	2020-02-22T17:05:43.000Z	Why I HATE Ice Age Baby..	ice age, bernie sanders and epic more memes\n1...	PewDiePie	[SATIRE]	False	8294802	876844	9012	65473
 Old1YzSG_S8	2020-02-21T17:24:01.000Z	I went on a break for 30 days & THIS HAPPENED	Good to be back gamer\n100 CLUB MERCH OUT NOW!...	PewDiePie	[SATIRE]	False	12563728	1643597	20071	178070
+
+
+
+
+
+
+
+
+
