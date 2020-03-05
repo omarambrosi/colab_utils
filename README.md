@@ -49,12 +49,14 @@ results:
 ```
 
 ### yt_to_df(developerKey, id)
+Import data from a list of videos, a channel or a playlist.
 ```colab
-yt_to_df(YOUR_DEVELOPER_KEY, 'UC-lHJZR3Gqxm24_Vd_AJ5Yw').head(3)
+df = yt_to_df(YOUR_DEVELOPER_KEY, 'UC-lHJZR3Gqxm24_Vd_AJ5Yw')
+df.head(3)
 ```
-pull metadta from video or channel or playlist
-
 results:
-|   video_id   |       publishedAt       |       video_title        |                    description                     | channelTitle | tags | madeForKids | viewCount | likeCount | dislikeCount | commentCount |
-|--------------|-------------------------|--------------------------|----------------------------------------------------|-------------------|-------------------------|--------------------------|-------------------|--------------------------------|-------------------|-------------------------|
-| VgvvfSvg2bQ | 2020-02-23T17:30:01.000Z | What is Jake Paul up to? | The financial freedom movement is here thanks ...	 | PewDiePie | [SATIRE, What is Jake Paul up to?, jake paul, ...] | False | 6279395 | 554819 | 8267 46464 |
+|  video_id   |       publishedAt        |       video_title        |                    description                     | duration | privacyStatus  | channelTitle |           tags           | madeForKids | viewCount | likeCount | dislikeCount | commentCount |
+|-------------|--------------------------|--------------------------|----------------------------------------------------|-------------|----------------|--------------|--------------------------|-------------|-----------|-----------|-----------------|--------------|
+| Lq8QxKnN_5I | 2020-03-03T18:10:31.000Z | LOST my HAIR, When H...  | new meme album is boppin\n100 CLUB MERCH OUT N...	 | PT14M9S  | public         | PewDiePie    | [SATIRE, pewdiepie,...]  | False       | 5854206   | 450998    | 52937        |
+| grphMTBly7Q | 2020-03-02T17:54:21.000Z |  Supergirl is Super C... | supergirl is super not epic \n100 CLUB MERCH O...	 | PT10M30S | public         | PewDiePie    | [SATIRE]                 | False       | 5079267   | 554819    | 32723        |
+| QRgSeOifk7o | 2020-03-01T18:54:30.000Z | Images That Precede U... | Images that proceed unfortunate events is epic...	 | PT11M20S | public         | PewDiePie    | [SATIRE]                 | False       | 7086811   | 515929    | 28694        |
