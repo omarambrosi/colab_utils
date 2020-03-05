@@ -37,6 +37,20 @@ import colab_youtube
 ### [csv_to_bq(table_location, partitioned=False)](colab_bigquery.py)
 ### [bq_to_df(project_id, query)](colab_bigquery.py)
 ### [get_random_rows_from_bq_table(project_id, table_location, n_of_samples)](colab_bigquery.py)
+Get APPROXIMATELY n_of_samples from a BigQuery table
+```python
+get_random_rows_from_bq_table(YOUR_BQ_PROJECT_ID, 'bigquery-public-data.wikipedia.wikidata', 3).iloc[:,0:6]
+```
+results:
+| id	      | numeric_id | en_label                      | en_wiki	| en_description	| ja_label |
+|-----------|------------|-------------------------------|----------|-----------------|----------|
+|	Q38962972	| 38962972	 | Veterans Living with HIV: ... | None	    | scientific a... | None     |
+|	Q51195092	| 51195092	 | Template:Taxonomy/Bythaelurus | Templa...|	None	          | None     |
+|	Q75088335	| 75088335	 | CTLGD 8239	                   | None	    | None	          | None     |
+|	Q56129812	| 56129812	 | transcriptional regulator...  | None	    | microbial ge... | None     |
+
+
+
 ### [list_datasets_from_bq_project(project_id)](colab_bigquery.py)
 ```python
 list_datasets_from_bq_project('bigquery-public-data')[:3]
