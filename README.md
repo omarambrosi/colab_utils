@@ -31,9 +31,9 @@ import colab_youtube
 * [cid_to_df]
 
 ## Documentation
-### Pandas
-### YouTube
-### BigQuery
+## Pandas
+## YouTube
+## BigQuery
 ### df_to_bq(df, table_location, partitioned=False)
 ### csv_to_bq(table_location, partitioned=False)
 ### bq_to_df(project_id, query)
