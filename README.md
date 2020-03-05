@@ -1,12 +1,12 @@
 # colab_utils
-This package contains functions that extend and simplify the intereaction between Colab and BigQuery, YouTube and files in general.
+This package contains modules that extend and simplify the intereaction with BigQuery, YouTube and files in general.
 
-To import all the functions into a Colab notebook:
+To import all the functions of a module into a Colab notebook:
 ```
 !git clone https://github.com/omarambrosi/colab_utils
 import sys
 sys.path.append('colab_utils')
-import colab_utils
+import colab_youtube
 ```
 
 ## Functions
