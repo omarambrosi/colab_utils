@@ -57,3 +57,12 @@ results:
 | Lq8QxKnN_5I | 2020-03-03T18:10:31.000Z | LOST my HAIR, When H...  | new meme album is boppin\n100...	 | PT14M9S  | public         | PewDiePie    | [SATIRE, pewdiepie,...]  | False       | 5854206   | 450998    | 6331         | 52937        |
 | grphMTBly7Q | 2020-03-02T17:54:21.000Z |  Supergirl is Super C... | supergirl is super not epic  ...	 | PT10M30S | public         | PewDiePie    | [SATIRE]                 | False       | 5079267   | 554819    | 10956        |   32723        |
 | QRgSeOifk7o | 2020-03-01T18:54:30.000Z | Images That Precede...   | Images that proceed unfortuna...	 | PT11M20S | public         | PewDiePie    | [SATIRE]                 | False       | 7086811   | 515929    | 6571         |  28694        |
+```python
+yt_to_df(YOUR_DEVELOPER_KEY, ["Lq8QxKnN_5I", "grphMTBly7Q", "QRgSeOifk7o"])
+```
+results:
+|  video_id   |       publishedAt        |       video_title        |            description              | duration | privacyStatus  | channelTitle |           tags           | madeForKids | viewCount | likeCount | dislikeCount | commentCount |
+|-------------|--------------------------|--------------------------|----------------------------------------------------|-------------|----------------|--------------|--------------------------|-------------|-----------|-----------|-----------------|--------------|
+| Lq8QxKnN_5I | 2020-03-03T18:10:31.000Z | LOST my HAIR, When H...  | new meme album is boppin\n100...	 | PT14M9S  | public         | PewDiePie    | [SATIRE, pewdiepie,...]  | False       | 5854206   | 450998    | 6331         | 52937        |
+| grphMTBly7Q | 2020-03-02T17:54:21.000Z |  Supergirl is Super C... | supergirl is super not epic  ...	 | PT10M30S | public         | PewDiePie    | [SATIRE]                 | False       | 5079267   | 554819    | 10956        |   32723        |
+| QRgSeOifk7o | 2020-03-01T18:54:30.000Z | Images That Precede...   | Images that proceed unfortuna...	 | PT11M20S | public         | PewDiePie    | [SATIRE]                 | False       | 7086811   | 515929    | 6571         |  28694        |
