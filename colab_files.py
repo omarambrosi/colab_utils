@@ -7,7 +7,6 @@ from colab_files import *
 '''
 
 from google.colab import files, auth
-from google.cloud import bigquery
 from datetime import date
 import pandas as pd
 import io
