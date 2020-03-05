@@ -1,5 +1,5 @@
-# Colab Utils
-This directory contains functions that extend and simplify the intereaction between Colab and Pandas, BigQuery and YouTube.
+# colab_utils
+This package contains functions that extend and simplify the intereaction between Colab and BigQuery, YouTube and files in general.
 
 To import all the functions into a Colab notebook:
 ```
