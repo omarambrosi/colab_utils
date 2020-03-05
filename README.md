@@ -43,7 +43,6 @@ import colab_youtube
 list_datasets_from_bq_project('bigquery-public-data')[:3]
 ```
 results:
-
 ```Python
 ['austin_311', 'austin_bikeshare', 'austin_crime']
 ```
@@ -51,8 +50,7 @@ results:
 ### yt_to_df(developerKey, id)
 Import data from a list of videos, a channel or a playlist.
 ```colab
-df = yt_to_df(YOUR_DEVELOPER_KEY, 'UC-lHJZR3Gqxm24_Vd_AJ5Yw')
-df.head(3)
+yt_to_df(YOUR_DEVELOPER_KEY, 'UC-lHJZR3Gqxm24_Vd_AJ5Yw').head(3)
 ```
 results:
 |  video_id   |       publishedAt        |       video_title        |            description              | duration | privacyStatus  | channelTitle |           tags           | madeForKids | viewCount | likeCount | dislikeCount | commentCount |
