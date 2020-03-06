@@ -6,29 +6,29 @@ To import all the functions of a module into a Colab notebook:
 !git clone https://github.com/omarambrosi/colab_utils
 import sys
 sys.path.append('colab_utils')
-import colab_youtube
+from colab_youtube import *
 ```
 
 ## Functions
 
 ### Pandas
-* [csv_to_df]
-* [excel_to_df]
-* [gspread_to_dfs]
-* [df_to_csv]
-* [df_to_gspread]
+* csv_to_df
+* excel_to_df
+* gspread_to_dfs
+* df_to_csv
+* df_to_gspread
 
 ### BigQuery
 * [df_to_bq](#df_to_bqdf-table_location-partitionedfalse)
 * [csv_to_bq](#csv_to_bqtable_location-partitionedfalse)
-* [gspread_to_bq]
+* gspread_to_bq
 * [bq_to_df](#bq_to_dfproject_id-query)
 * [get_random_rows_from_bq_table](#get_random_rows_from_bq_tableproject_id-table_location-n_of_samples)
 * [list_datasets_from_bq_project](#list_datasets_from_bq_projectproject_id)
 
 ### YouTube
-* [yt_to_df]
-* [cid_to_df]
+* [yt_to_df](#yt_to_dfdeveloperKey-id))
+* cid_to_df
 
 ## Documentation
 ## Pandas
