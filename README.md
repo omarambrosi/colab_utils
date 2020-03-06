@@ -27,7 +27,7 @@ from colab_youtube import *
 * [list_datasets_from_bq_project](#list_datasets_from_bq_projectproject_id)
 
 ### YouTube
-* [yt_to_df](#yt_to_dfdeveloperKey-id))
+* [yt_to_df](#yt_to_dfdeveloperKey-id)
 * cid_to_df
 
 ## Documentation
