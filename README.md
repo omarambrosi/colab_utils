@@ -1,4 +1,4 @@
-# Extend and simplify frequent operations in Google Colab
+# colab_utils extends and simplifies frequent operations in Google Colab
 This package contains some modules that extend and simplify the interaction with Pandas, BigQuery and YouTube.
 
 To import all the functions of a module into a Colab notebook:
