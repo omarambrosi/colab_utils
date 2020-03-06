@@ -23,7 +23,7 @@ from colab_youtube import *
 * [csv_to_bq](#csv_to_bqtable_location-partitionedfalse)
 * gspread_to_bq
 * [bq_to_df](#bq_to_dfproject_id-query)
-* [get_random_rows_from_bq_table](#get_random_rows_from_bq_tableproject_id-table_location-n_of_samples)
+* [get_random_rows_from_bq_table](#get_random_rows_from_bq_tableproject_id-table_location-n_of_rows)
 * [list_datasets_from_bq_project](#list_datasets_from_bq_projectproject_id)
 
 ### YouTube
