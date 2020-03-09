@@ -11,8 +11,7 @@ from colab_youtube import *
 
 ## Functions
 
-### Pandas 
-## colab_files
+### Files 
 * csv_to_df
 * excel_to_df
 * gspread_to_dfs
@@ -20,7 +19,6 @@ from colab_youtube import *
 * df_to_gspread
 
 ### BigQuery
-## colab_bigquery
 * [df_to_bq](#df_to_bqdf-table_location-partitionedfalse)
 * [csv_to_bq](#csv_to_bqtable_location-partitionedfalse)
 * gspread_to_bq
@@ -29,13 +27,14 @@ from colab_youtube import *
 * [list_datasets_from_bq_project](#list_datasets_from_bq_projectproject_id)
 
 ### YouTube
-## colab_youtube
 * [yt_to_df](#yt_to_dfdeveloperKey-id)
 * cid_to_df
 
 ## Documentation
-## Pandas
+## Files
+from colab_files import *
 ## BigQuery
+from colab_bigquery import *
 ### [df_to_bq(df, table_location, partitioned=False)](colab_bigquery.py)
 ### [csv_to_bq(table_location, partitioned=False)](colab_bigquery.py)
 ### [bq_to_df(project_id, query)](colab_bigquery.py)
@@ -62,6 +61,7 @@ results:
 ['austin_311', 'austin_bikeshare', 'austin_crime']
 ```
 ## YouTube
+from colab_youtube import *
 ### [yt_to_df(developerKey, id)](colab_youtube.py)
 Import data from a list of videos, a channel or a playlist.
 ```python
