@@ -17,7 +17,7 @@ from colab_youtube import *
 * csv_to_df
 * excel_to_df
 * gspread_to_dfs
-* df_to_csv
+* [df_to_csv](#df_to_csvdf-file_name="untitled"-index=false)
 * df_to_gspread
 
 ### BigQuery
@@ -36,7 +36,7 @@ from colab_youtube import *
 ### Files
 from colab_files import *
 #### [df_to_csv(df, file_name="Untitled", index=False)](colab_files.py)
-It download a df to local csv. Add the current date to the file name. Index is set to False by default.
+Export a Pandas DataFrame as a local csv. It doesn't include the index by default and appends the current date to the file name.
 ```python
 df_to_csv(df)
 ```
