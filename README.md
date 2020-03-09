@@ -1,7 +1,7 @@
 # colab_utils
 This package contains modules that extend and simplify the interaction with files, BigQuery and YouTube.
 ## Installing
-To import all the functions from a module (e.g. colab_youtube) into a Colab notebook:
+To import all the functions from a module (e.g. from colab_youtube) into a Colab notebook:
 ```ipython
 !git clone https://github.com/omarambrosi/colab_utils
 import sys
@@ -36,6 +36,9 @@ from colab_youtube import *
 ## Documentation
 ### Files
 from colab_files import *
+#### [csv_to_df()](colab_files.py)
+Import a csv into a Pandas DataFrame
+
 #### [df_to_csv(df, file_name="Untitled", index=False)](colab_files.py)
 Export a Pandas DataFrame as a local csv. It doesn't include the index by default and it appends the current date to the file name.
 ```python
