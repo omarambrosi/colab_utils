@@ -1,5 +1,5 @@
-# colab_utils extends and simplifies frequent operations in Google Colab
-This package contains some modules that extend and simplify the interaction with Pandas, BigQuery and YouTube.
+# colab_utils
+This package contains modules that extend and simplify the interaction with files, BigQuery and YouTube.
 
 To import all the functions of a module into a Colab notebook:
 ```ipython
@@ -11,7 +11,8 @@ from colab_youtube import *
 
 ## Functions
 
-### Pandas
+### Pandas 
+## colab_files
 * csv_to_df
 * excel_to_df
 * gspread_to_dfs
@@ -19,6 +20,7 @@ from colab_youtube import *
 * df_to_gspread
 
 ### BigQuery
+## colab_bigquery
 * [df_to_bq](#df_to_bqdf-table_location-partitionedfalse)
 * [csv_to_bq](#csv_to_bqtable_location-partitionedfalse)
 * gspread_to_bq
@@ -27,6 +29,7 @@ from colab_youtube import *
 * [list_datasets_from_bq_project](#list_datasets_from_bq_projectproject_id)
 
 ### YouTube
+## colab_youtube
 * [yt_to_df](#yt_to_dfdeveloperKey-id)
 * cid_to_df
 
