@@ -33,14 +33,14 @@ from colab_youtube import *
 * cid_to_df
 
 ## Documentation
-## Files
+### Files
 from colab_files import *
-## BigQuery
+### BigQuery
 from colab_bigquery import *
-### [df_to_bq(df, table_location, partitioned=False)](colab_bigquery.py)
-### [csv_to_bq(table_location, partitioned=False)](colab_bigquery.py)
-### [bq_to_df(project_id, query)](colab_bigquery.py)
-### [get_random_rows_from_bq_table(project_id, table_location, n_of_rows)](colab_bigquery.py)
+#### [df_to_bq(df, table_location, partitioned=False)](colab_bigquery.py)
+#### [csv_to_bq(table_location, partitioned=False)](colab_bigquery.py)
+#### [bq_to_df(project_id, query)](colab_bigquery.py)
+#### [get_random_rows_from_bq_table(project_id, table_location, n_of_rows)](colab_bigquery.py)
 Get an APPROXIMATED number of random rows from a BigQuery table
 ```python
 df = get_random_rows_from_bq_table(YOUR_BQ_PROJECT_ID, 'bigquery-public-data.wikipedia.wikidata', 3)
@@ -54,7 +54,7 @@ results:
 |	Q75088335	| 75088335	 | CTLGD 8239	                   | None	    | None	          | None     |
 |	Q56129812	| 56129812	 | transcriptional regulator...  | None	    | microbial ge... | None     |
 
-### [list_datasets_from_bq_project(project_id)](colab_bigquery.py)
+#### [list_datasets_from_bq_project(project_id)](colab_bigquery.py)
 ```python
 list_datasets_from_bq_project('bigquery-public-data')[:3]
 ```
@@ -62,9 +62,9 @@ results:
 ```python
 ['austin_311', 'austin_bikeshare', 'austin_crime']
 ```
-## YouTube
+### YouTube
 from colab_youtube import *
-### [yt_to_df(developerKey, id)](colab_youtube.py)
+#### [yt_to_df(developerKey, id)](colab_youtube.py)
 Import data from a list of videos, a channel or a playlist.
 ```python
 yt_to_df(YOUR_DEVELOPER_KEY, "UC-lHJZR3Gqxm24_Vd_AJ5Yw").head(2)
