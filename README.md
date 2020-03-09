@@ -49,7 +49,7 @@ from colab_bigquery import *
 #### [get_random_rows_from_bq_table(project_id, table_location, n_of_rows)](colab_bigquery.py)
 Get an APPROXIMATED number of random rows from a BigQuery table
 ```python
-df = get_random_rows_from_bq_table(YOUR_BQ_PROJECT_ID, 'bigquery-public-data.wikipedia.wikidata', 3)
+df = get_random_rows_from_bq_table({YOUR_BQ_PROJECT_ID}, 'bigquery-public-data.wikipedia.wikidata', 3)
 df.iloc[:,0:6]
 ```
 results:
@@ -73,7 +73,7 @@ from colab_youtube import *
 #### [yt_to_df(developerKey, id)](colab_youtube.py)
 Import data from a list of videos, a channel or a playlist.
 ```python
-yt_to_df(YOUR_DEVELOPER_KEY, "UC-lHJZR3Gqxm24_Vd_AJ5Yw").head(2)
+yt_to_df({YOUR_DEVELOPER_KEY}, "UC-lHJZR3Gqxm24_Vd_AJ5Yw").head(2)
 ```
 results:
 |  video_id   |       publishedAt        |       video_title        |            description              | duration | privacyStatus  | channelTitle |           tags           | madeForKids | viewCount | likeCount | dislikeCount | commentCount |
@@ -82,7 +82,7 @@ results:
 | grphMTBly7Q | 2020-03-02T17:54:21.000Z |  Supergirl is Super C... | supergirl is super not epic  ...	 | PT10M30S | public         | PewDiePie    | [SATIRE]                 | False       | 5079267   | 554819    | 10956        |   32723        |
 
 ```python
-yt_to_df(YOUR_DEVELOPER_KEY, ["Lq8QxKnN_5I", "grphMTBly7Q"])
+yt_to_df({YOUR_DEVELOPER_KEY}, ["Lq8QxKnN_5I", "grphMTBly7Q"])
 ```
 results:
 |  video_id   |       publishedAt        |       video_title        |            description              | duration | privacyStatus  | channelTitle |           tags           | madeForKids | viewCount | likeCount | dislikeCount | commentCount |
