@@ -15,7 +15,7 @@ from colab_youtube import *
 ## Functions
 
 ### Files 
-* csv_to_df
+* [csv_to_df](#csv_to_df)
 * excel_to_df
 * gspread_to_dfs
 * [df_to_csv](#df_to_csvdf-file_nameuntitled-indexfalse)
