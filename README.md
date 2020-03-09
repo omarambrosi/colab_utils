@@ -36,7 +36,7 @@ from colab_youtube import *
 ### Files
 from colab_files import *
 #### [df_to_csv(df, file_name="Untitled", index=False)](colab_files.py)
-Export a Pandas DataFrame as a local csv. It doesn't include the index by default and appends the current date to the file name.
+Export a Pandas DataFrame as a local csv. It doesn't include the index by default and it appends the current date to the file name.
 ```python
 df_to_csv(df)
 ```
@@ -49,8 +49,7 @@ from colab_bigquery import *
 #### [get_random_rows_from_bq_table(project_id, table_location, n_of_rows)](colab_bigquery.py)
 Get an APPROXIMATED number of random rows from a BigQuery table
 ```python
-df = get_random_rows_from_bq_table({YOUR_BQ_PROJECT_ID}, 'bigquery-public-data.wikipedia.wikidata', 3)
-df.iloc[:,0:6]
+get_random_rows_from_bq_table({YOUR_BQ_PROJECT_ID}, 'bigquery-public-data.wikipedia.wikidata', 3).iloc[:,0:6]
 ```
 results:
 | id	      | numeric_id | en_label                      | en_wiki	| en_description	| ja_label |
