@@ -35,6 +35,12 @@ from colab_youtube import *
 ## Documentation
 ### Files
 from colab_files import *
+#### [df_to_csv(df, file_name="Untitled", index=False)](colab_files.py)
+It download a df to local csv. Add the current date to the file name. Index is set to False by default.
+```python
+df_to_csv(df)
+```
+
 ### BigQuery
 from colab_bigquery import *
 #### [df_to_bq(df, table_location, partitioned=False)](colab_bigquery.py)
