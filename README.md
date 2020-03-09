@@ -37,7 +37,10 @@ from colab_youtube import *
 ### Files
 from colab_files import *
 #### [csv_to_df()](colab_files.py)
-Import a csv into a Pandas DataFrame
+Import a csv into a Pandas DataFrame. It prompts a file dialog to chose the file. 
+```python
+csv_to_df()
+```
 
 #### [df_to_csv(df, file_name="Untitled", index=False)](colab_files.py)
 Export a Pandas DataFrame as a local csv. It doesn't include the index by default and it appends the current date to the file name.
