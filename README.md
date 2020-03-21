@@ -38,7 +38,9 @@ from colab_youtube import *
 
 ## Documentation
 ### Files
+```ipython
 from colab_files import *
+```
 #### [csv_to_df(path=None)](colab_files.py)
 Import a csv into a Pandas DataFrame. If a path is not specified, it prompts a file dialog to upload a local file. 
 ```python
@@ -52,7 +54,9 @@ df_to_csv(df)
 ```
 
 ### BigQuery
+```ipython
 from colab_bigquery import *
+```
 #### [df_to_bq(df, table_location, partitioned=False)](colab_bigquery.py)
 #### [csv_to_bq(table_location, partitioned=False)](colab_bigquery.py)
 #### [bq_to_df(project_id, query)](colab_bigquery.py)
@@ -78,7 +82,9 @@ results:
 ['austin_311', 'austin_bikeshare', 'austin_crime']
 ```
 ### YouTube
+```ipython
 from colab_youtube import *
+```
 #### [yt_to_df(developerKey, id)](colab_youtube.py)
 Import data from a list of videos, a channel or a playlist.
 ```python
