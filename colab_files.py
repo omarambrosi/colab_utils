@@ -14,9 +14,12 @@ from oauth2client.client import GoogleCredentials
 import gspread
 import gspread_dataframe as gd
 
-def csv_to_df():
-  local_file = files.upload()
-  return pd.read_csv(list(local_file.keys())[0])
+def csv_to_df(path=None):
+  if path == None:
+    local_file = files.upload()
+    return pd.read_csv(list(local_file.keys())[0])
+  else:
+    return pd.read_csv(path)
 
 def excel_to_df():
   local_file = files.upload()
