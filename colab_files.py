@@ -6,7 +6,7 @@ sys.path.append('colab_utils')
 from colab_files import *
 '''
 
-from google.colab import files, auth
+from google.colab import files, auth, drive
 from datetime import date
 import pandas as pd
 import io
@@ -19,6 +19,8 @@ def csv_to_df(path=None):
     local_file = files.upload()
     return pd.read_csv(list(local_file.keys())[0], encoding="latin-1")
   else:
+    #Authenticate to Drive
+    drive.mount('/content/drive/', force_remount=True)
     return pd.read_csv(path, encoding="latin-1")
 
 def excel_to_df():
