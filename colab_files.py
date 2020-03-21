@@ -17,9 +17,9 @@ import gspread_dataframe as gd
 def csv_to_df(path=None):
   if path == None:
     local_file = files.upload()
-    return pd.read_csv(list(local_file.keys())[0])
+    return pd.read_csv(list(local_file.keys())[0], encoding="latin-1")
   else:
-    return pd.read_csv(path)
+    return pd.read_csv(path, encoding="latin-1")
 
 def excel_to_df():
   local_file = files.upload()
