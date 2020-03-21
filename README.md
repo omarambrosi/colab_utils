@@ -71,19 +71,25 @@ dfs_dict = {'df1': pd.DataFrame([[1, 2, 3, 4],
                                  [ 1,  2,  3]],
                                  index=['row1', 'row2', 'row3', 'row4'], columns=['Z', 'b', 'c'])
             }      
-any_columns_diff([df1, df1, df1])
+dfs_any_columns_diff(dfs_dict)
 ```
 results:
 ```python
+True
 ```
 
 #### [dfs_any_columns_diff(dfs)](colab_files.py)
 Get a list or a dict of Pandas DataFrame
 ```python
-get_columns_diff(dfs_dict, True)
+dfs_columns_diff(dfs_dict, True)
 ```
 results:
 ```python
+| df1	|    df2    |    df3    |
+|-----|-----------|-----------|
+| df1	|	[c, b, d]	| [c, b, Z] |
+| df2	|    [f]		|   [Z]     |
+| df3	|   [a, f]  |  [a, d]	  |
 ```
 
 ### BigQuery
