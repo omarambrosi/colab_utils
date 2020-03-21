@@ -77,20 +77,17 @@ results:
 ```python
 True
 ```
-
 #### [dfs_any_columns_diff(dfs)](colab_files.py)
 Get a list or a dict of Pandas DataFrame
 ```python
 dfs_columns_diff(dfs_dict, True)
 ```
 results:
-```python
-| df1	|    df2    |    df3    |
-|-----|-----------|-----------|
-| df1	|	[c, b, d]	| [c, b, Z] |
-| df2	|    [f]		|   [Z]     |
-| df3	|   [a, f]  |  [a, d]	  |
-```
+|   df1  	|    df2    |    df3    |
+|---------|-----------|-----------|
+|   df1	  |	[c, b, d]	| [c, b, Z] |
+|   df2	  |    [f]		|    [Z]    |
+|   df3	  |  [a, f]   |   [a, d]  |
 
 ### BigQuery
 ```ipython
