@@ -51,7 +51,7 @@ def df_to_gspread(df, gspread_name="Untitled"):
   gd.set_with_dataframe(ws, df)
   return "https://docs.google.com/spreadsheets/d/" + sh.id
 
-def get_columns_diff(dfs, highlight_value=False):
+def get_dfs_columns_diff(dfs, highlight_value=False):
   """ Get the differences in the schema of a list of dfs
   Args:
     dfs: a dict or list of dataframe
@@ -81,7 +81,7 @@ def get_columns_diff(dfs, highlight_value=False):
     df = df.applymap(lambda y : None if len(y)==0 else y)
   return df
 
-def any_columns_diff(dfs):
+def any_dfs_columns_diff(dfs):
   """
   Check if there is any difference in the columns names between the dataframes
   Args:
@@ -91,4 +91,4 @@ def any_columns_diff(dfs):
     a boolean to display if there is any difference amongst any couple of dataframes
   """
 
-  return get_columns_diff(dfs, False).any().any()
+  return get_dfs_columns_diff(dfs, False).any().any()
