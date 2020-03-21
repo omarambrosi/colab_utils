@@ -50,3 +50,45 @@ def df_to_gspread(df, gspread_name="Untitled"):
   ws = sh.get_worksheet(0)
   gd.set_with_dataframe(ws, df)
   return "https://docs.google.com/spreadsheets/d/" + sh.id
+
+def get_columns_diff(dfs, highlight_value=False):
+  """ Get the differences in the schema of a list of dfs
+  Args:
+    dfs: a dict or list of dataframe
+  
+  Returns:
+    a dataframe where each cell is a list with the differenes in columns between a couple of dataframes 
+    it's case sensitive. Doesn't get back the resulsts in orders 
+  """
+  
+  if type(dfs) is dict:
+    df = pd.DataFrame(index=[y for i,y in enumerate(dfs)], columns = [y for i,y in enumerate(dfs)])
+  else:
+    df = pd.DataFrame(index=[i for i,y in enumerate(dfs)], columns = [i for i,y in enumerate(dfs)])
+
+  # give back a df with differences as intersection between all dfs.
+
+
+  #df = df.apply(lambda row : list(set(dfs[row.name].values.tolist()).difference(set(dfs[row.name].values.tolist()))))
+  for i in df.columns.values:
+    for y in df.index.values:
+      df.loc[i,y] = list(set(dfs[y].columns.values.tolist()).difference(set(dfs[i].columns.values.tolist())))
+  
+  if highlight_value:
+    # convert the empty lists into empty strings
+    df = df.applymap(lambda y : '' if len(y)==0 else y)
+  else:
+    df = df.applymap(lambda y : None if len(y)==0 else y)
+  return df
+
+def any_columns_diff(dfs):
+  """
+  Check if there is any difference in the columns names between the dataframes
+  Args:
+    dfs: a list of dataframes
+  
+  Returns:
+    a boolean to display if there is any difference amongst any couple of dataframes
+  """
+
+  return get_columns_diff(dfs, False).any().any()
