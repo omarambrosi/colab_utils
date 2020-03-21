@@ -39,8 +39,8 @@ from colab_youtube import *
 ## Documentation
 ### Files
 from colab_files import *
-#### [csv_to_df()](colab_files.py)
-Import a csv into a Pandas DataFrame. It prompts a file dialog to chose the file. 
+#### [csv_to_df(path=None)](colab_files.py)
+Import a csv into a Pandas DataFrame. If a path is not specified, it prompts a file dialog to upload a local file. 
 ```python
 csv_to_df()
 ```
