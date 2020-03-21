@@ -21,8 +21,8 @@ from colab_youtube import *
 * gdrive_to_dfs
 * [df_to_csv](#df_to_csvdf-file_nameuntitled-indexfalse)
 * df_to_gspread
-* [dfs_columns_diff](#dfs-highlight_valueFalse)
-* [dfs_any_columns_diff](#dfs_any_columns_diffdf)
+* [dfs_columns_diff](#dfs_columns_diffdfs-highlight_valueFalse)
+* [dfs_any_columns_diff](#dfs_any_columns_diffdfs)
 
 ### BigQuery
 * [df_to_bq](#df_to_bqdf-table_location-partitionedfalse)
