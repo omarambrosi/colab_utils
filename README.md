@@ -56,11 +56,19 @@ df_to_csv(df)
 #### [dfs_columns_diff(dfs, highlight_value=False)](colab_files.py)
 Get a list or a dict of Pandas DataFrame
 ```python
-df1 = pd.DataFrame([[1, 2, 3, 4], [4, 5, 6, 7], [7, 8, 2, 6]],
+df1 = pd.DataFrame([[1, 2, 3, 4],
+                    [4, 5, 6, 7],
+                    [7, 8, 2, 6]],
                     index=['row1', 'row2', 'row3'], columns=['a', 'f', 'a', 'a'])
-df2 = pd.DataFrame([[11, 22, 33, 44], [44, 55, 66, 77], [77, 88, 22, 33], [1, 2, 3, 4]],
+df2 = pd.DataFrame([[11, 22, 33, 44],
+                    [44, 55, 66, 77],
+                    [77, 88, 22, 33],
+                    [1,   2,  3,  4]],
                     index=['row1', 'row2', 'row3', 'row4'], columns=['a', 'b', 'c', 'd'])
-df3 = pd.DataFrame([[11, 22, 33], [44, 55, 66], [77, 88, 22], [1, 2, 3]],
+df3 = pd.DataFrame([[11, 22, 33],
+                    [44, 55, 66],
+                    [77, 88, 22], 
+                    [ 1,  2,  3]],
                     index=['row1', 'row2', 'row3', 'row4'], columns=['Z', 'b', 'c'])
 dfs_dict = {'df1': df1, 'df2': df2, 'df3': df3}
 
