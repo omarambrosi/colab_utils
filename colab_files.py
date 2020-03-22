@@ -48,6 +48,17 @@ def gspread_to_dfs(spreadsheet_id):
   #Convert the dict of tables into a dict of dataframes
   return {key : pd.DataFrame(tables[key][1:], columns=tables[key][0]) for key in tables}
 
+def excel_to_dfs(path=None):
+  # path must be /content/drive/My Drive/...
+
+  if path == None:
+    local_file = files.upload()
+    return pd.read_excel(list(local_file.keys())[0], sheet_name=None, encoding="latin-1")
+  else:
+    #Authenticate to Drive
+    drive.mount('/content/drive/', force_remount=True)
+    return pd.read_excel(path, encoding="latin-1")
+
 def df_to_gspread(df, gspread_name="Untitled"):
   auth.authenticate_user()
   gc = gspread.authorize(GoogleCredentials.get_application_default())
