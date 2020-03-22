@@ -14,7 +14,7 @@ from colab_youtube import *
 
 ## Functions
 
-### Files 
+### colab_files 
 * [csv_to_df](#csv_to_dfpathnone)
 * [excel_to_dfs](#excel_to_dfspathnone)
 * gspread_to_dfs
@@ -25,7 +25,7 @@ from colab_youtube import *
 * [dfs_any_columns_diff](#dfs_any_columns_diffdfs)
 * [df_filter_all_columns](#df_filter_all_columnsdf-value-highlight_valueFalse)
 
-### BigQuery
+### colab_bigquery
 * [df_to_bq](#df_to_bqdf-table_location-partitionedfalse)
 * [csv_to_bq](#csv_to_bqtable_location-partitionedfalse)
 * gspread_to_bq
@@ -33,12 +33,12 @@ from colab_youtube import *
 * [get_random_rows_from_bq_table](#get_random_rows_from_bq_tableproject_id-table_location-n_of_rows)
 * [list_datasets_from_bq_project](#list_datasets_from_bq_projectproject_id)
 
-### YouTube
+### colab_youtube
 * [yt_to_df](#yt_to_dfdeveloperKey-id)
 * cid_to_df
 
 ## Documentation
-### Files
+### colab_files
 ```ipython
 from colab_files import *
 ```
@@ -104,7 +104,7 @@ results:
 |  row1  |       |   2   |       |       |
 |  row3  |       |       |   2   |       |
 
-### BigQuery
+### colab_bigquery
 ```ipython
 from colab_bigquery import *
 ```
@@ -132,7 +132,7 @@ results:
 ```python
 ['austin_311', 'austin_bikeshare', 'austin_crime']
 ```
-### YouTube
+### colab_youtube
 ```ipython
 from colab_youtube import *
 ```
