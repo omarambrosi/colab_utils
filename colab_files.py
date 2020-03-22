@@ -97,3 +97,26 @@ def dfs_any_columns_diff(dfs):
   """
 
   return dfs_columns_diff(dfs, False).any().any()
+
+def filter_all_columns(df, value, highlight_value=False):
+  """
+  Return a filtered version of the dataframe
+
+  Args:
+    df: The dataframe to be filtered
+    value: The value to filter the dataframe for
+    highlight_value: If Tru
+
+  Returns:
+
+  highlight_value = True will convert the results in string
+
+  All values are returned as strings
+  """
+
+  # get all the row where the exact value is in at least one column. Note this doesn't change the type of the columns
+  df2 = df[df.apply(lambda row : row.astype('str').eq(str(value)).any(), axis=1)]
+
+  if highlight_value:
+    df2 = df2.applymap(lambda cell : '' if str(value) not in str(cell) else cell)
+  return df2
