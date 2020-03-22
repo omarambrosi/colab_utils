@@ -16,7 +16,7 @@ from colab_youtube import *
 
 ### Files 
 * [csv_to_df](#csv_to_dfpathnone)
-* excel_to_df
+* [excel_to_dfs](#excel_to_dfspathnone)
 * gspread_to_dfs
 * gdrive_to_dfs
 * [df_to_csv](#df_to_csvdf-file_nameuntitled-indexfalse)
@@ -47,6 +47,7 @@ Import a csv into a Pandas DataFrame. If a path is not specified, it prompts a f
 ```python
 csv_to_df()
 ```
+#### [excel_to_dfs(path=None)(colab_files.py)
 
 #### [df_to_csv(df, file_name="Untitled", index=False)](colab_files.py)
 Export a Pandas DataFrame as a local csv. It doesn't include the index by default and it appends the current date to the file name.
