@@ -23,6 +23,7 @@ from colab_youtube import *
 * df_to_gspread
 * [dfs_columns_diff](#dfs_columns_diffdfs-highlight_valueFalse)
 * [dfs_any_columns_diff](#dfs_any_columns_diffdfs)
+* [df_filter_all_columns](#df_filter_all_columnsdf-value-highlight_valueFalse)
 
 ### BigQuery
 * [df_to_bq](#df_to_bqdf-table_location-partitionedfalse)
@@ -77,7 +78,7 @@ results:
 ```python
 True
 ```
-#### [dfs_any_columns_diff(dfs)](colab_files.py)
+#### [dfs_any_columns_diff(dfs)]
 Get a list or a dict of Pandas DataFrame
 ```python
 dfs_columns_diff(dfs_dict, True)
@@ -88,6 +89,16 @@ results:
 |   df1	  |	          | [c, b, d]	| [c, b, Z] |
 |   df2	  |    [f]		|           |    [Z]    |
 |   df3	  |  [a, f]   |   [a, d]  |           |
+
+#### [df_filter_all_columns(df, value, highlight_value=False)](colab_files.py)
+```python
+df_filter_all_columns(df1, 2, True)
+```
+results:
+|        |   a   |   f   |   a   |   a   |
+|--------|-------|-------|-------|-------|
+|  row1  |       |   2   |       |       |
+|  row3  |       |       |   2   |       |
 
 ### BigQuery
 ```ipython
