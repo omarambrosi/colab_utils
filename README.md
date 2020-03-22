@@ -43,12 +43,15 @@ from colab_youtube import *
 from colab_files import *
 ```
 #### [csv_to_df(path=None)](colab_files.py)
-Import a csv into a Pandas DataFrame. If a path is not specified, it prompts a file dialog to upload a local file. 
+Import a csv from Googgle Drive as Pandas DataFrame. If a path is not specified, it prompts a file dialog to upload a local file. 
 ```python
 csv_to_df()
 ```
-#### [excel_to_dfs(path=None)(colab_files.py)
-
+#### [excel_to_dfs(path=None)](colab_files.py)
+Import a Microsoft Excel file from Googgle Drive as list of Pandas DataFrames. If a path is not specified, it prompts a file dialog to upload a local file. 
+```python
+excel_to_dfs()
+```
 #### [df_to_csv(df, file_name="Untitled", index=False)](colab_files.py)
 Export a Pandas DataFrame as a local csv. It doesn't include the index by default and it appends the current date to the file name.
 ```python
