@@ -98,7 +98,7 @@ def dfs_any_columns_diff(dfs):
 
   return dfs_columns_diff(dfs, False).any().any()
 
-def filter_all_columns(df, value, highlight_value=False):
+def df_filter_all_columns(df, value, highlight_value=False):
   """
   Return a filtered version of the dataframe
 
