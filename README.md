@@ -34,7 +34,8 @@ from colab_youtube import *
 * [list_datasets_from_bq_project](#list_datasets_from_bq_projectproject_id)
 
 ### colab_youtube
-* [yt_to_df](#yt_to_dfdeveloperKey-id)
+* [yt_videos_to_df](#yt_videos_to_dfdeveloperKey-id)
+* yt_comments_to_df
 * cid_to_df
 
 ## Documentation
@@ -136,10 +137,10 @@ results:
 ```ipython
 from colab_youtube import *
 ```
-#### [yt_to_df(developerKey, id)](colab_youtube.py)
+#### [yt_videos_to_df(developerKey, id)](colab_youtube.py)
 Import data from a list of videos, a channel or a playlist.
 ```python
-yt_to_df({YOUR_DEVELOPER_KEY}, "UC-lHJZR3Gqxm24_Vd_AJ5Yw").head(2)
+yt_videos_to_df({YOUR_DEVELOPER_KEY}, "UC-lHJZR3Gqxm24_Vd_AJ5Yw").head(2)
 ```
 results:
 |  video_id   |       publishedAt        |       video_title        |            description              | duration | privacyStatus  | channelTitle |           tags           | madeForKids | viewCount | likeCount | dislikeCount | commentCount |
@@ -148,7 +149,7 @@ results:
 | grphMTBly7Q | 2020-03-02T17:54:21.000Z |  Supergirl is Super C... | supergirl is super not epic  ...	 | PT10M30S | public         | PewDiePie    | [SATIRE]                 | False       | 5079267   | 554819    | 10956        |   32723        |
 
 ```python
-yt_to_df({YOUR_DEVELOPER_KEY}, ["Lq8QxKnN_5I", "grphMTBly7Q"])
+yt_videos_to_df({YOUR_DEVELOPER_KEY}, ["Lq8QxKnN_5I", "grphMTBly7Q"])
 ```
 results:
 |  video_id   |       publishedAt        |       video_title        |            description              | duration | privacyStatus  | channelTitle |           tags           | madeForKids | viewCount | likeCount | dislikeCount | commentCount |
