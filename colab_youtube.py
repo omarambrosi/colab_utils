@@ -23,7 +23,7 @@ def _generate_df():
 	return pd.DataFrame(columns=['video_id', 'publishedAt', 'video_title', 'description', 'duration', 'privacyStatus',
 	                          'channelTitle', 'tags', 'madeForKids', 'viewCount', 'likeCount', 'dislikeCount', 'commentCount'])
 
-def yt_to_df(developerKey, id):
+def yt_videos_to_df(developerKey, id):
 	youtube = _yt_auth(developerKey)
 	results = pd.DataFrame()
 	if type(id) is list:
