@@ -41,6 +41,7 @@ def csv_to_bq(table_location, partitioned=False):
   job_config = bigquery.LoadJobConfig()
   job_config.source_format = 'CSV'
   job_config.maxBadRecords = 1000
+  job_config.ignoreUnknownValues=True
   job_config.autodetect=True
   if partitioned:
     job_config._properties['load']['timePartitioning'] = {'type': 'DAY'}
